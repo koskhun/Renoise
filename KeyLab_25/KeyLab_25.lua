@@ -6,16 +6,19 @@ class "KeyLab_25" (MidiDevice)
 
 keylab_btn_sysex_ref = {
 -- note,sysex,monocolour
+
+  {"G-6",0x6A,true}, --transport -stop
+  {"G#6",0x6B,true}, --transport -playPause
+  {"A-6",0x6C,true}, --transport -record
+  {"A#6",0x6E,true}, --previous track
+  {"B-6",0x6D,true}, --next track
+  
 --[[  
   {"D-7",0x1A,true}, --center -left ?? SoundMode ??
   {"D#7",0x1B,true}, --center -right ?? MultiMode ??
---]]
   {"G-6",0x6A,true}, --transport -reverse
   {"G#6",0x6B,true}, --transport -forward
-  {"A-6",0x6C,true}, --transport -stop
-  {"A#6",0x6D,true}, --transport -playPause
-  {"B-6",0x6E,true}, --transport -record
---[[  
+    
   {"D-6",0x6F,true}, --transport -loop
   {"C-1",0x22,false,false}, --SoundMode -Switch 1
   {"C#1",0x23,false,false}, --SoundMode -Switch 2
