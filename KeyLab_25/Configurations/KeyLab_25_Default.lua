@@ -45,8 +45,9 @@ duplex_configurations:insert {
       mappings = {
         loop_pattern = {
           group_name = "TRANSPORT",
-          index = 6,
+          index = 4,
         },
+        --[[
         goto_previous = {
           group_name = "TRANSPORT",
           index = 1,
@@ -55,19 +56,57 @@ duplex_configurations:insert {
           group_name = "TRANSPORT",
           index = 2,
         },
+        --]]
         stop_playback = {
           group_name = "TRANSPORT",
-          index = 3,
+          index = 1,
         },
         start_playback = {
           group_name = "TRANSPORT",
-          index = 4,
+          index = 2,
         },
         edit_mode = {
           group_name = "TRANSPORT",
-          index = 5, 
+          index = 3, 
         },
       },
+    },
+    TrackSelector = {
+      mappings = {
+        previous_track = {
+          group_name = "TRACKSELECT",
+          index = 1,
+        },
+        next_track = {
+          group_name = "TRACKSELECT",
+          index = 2,
+        },
+      },
+    },
+    TrackSelector ={
+      mappings ={
+        select_track = {
+          group_name = "SWITCHES1",  
+        },
+      },
+      options = {
+        items = {"1","2","3","4","5",
+        },
+      }
+    },
+    TrackSelector ={
+      mappings ={
+        select_track = {
+          group_name = "SWITCHES2",  
+        },
+      },
+      options = {
+        on_change = function(app)
+          app:update()
+        end,
+        items = {"6","7","8","9","10",
+        },
+      }
     },
   },
 }
